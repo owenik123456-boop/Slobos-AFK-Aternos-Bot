@@ -1276,6 +1276,22 @@ function createBot() {
       defaultMove.liquidCost = 1000;
       defaultMove.fallDamageCost = 1000;
 
+      // ---------- TEMP DEBUG: log everything the server sends ----------
+      // This helps diagnose limbo/proxy login prompts that aren't plain chat messages.
+      bot.on("messagestr", (message) => {
+        addLog(`[DEBUG chat] ${message}`);
+      });
+      bot._client.on("title", (packet) => {
+        addLog(`[DEBUG title] ${JSON.stringify(packet)}`);
+      });
+      bot._client.on("action_bar", (packet) => {
+        addLog(`[DEBUG actionbar] ${JSON.stringify(packet)}`);
+      });
+      bot._client.on("respawn", (packet) => {
+        addLog(`[DEBUG respawn/server-switch] ${JSON.stringify(packet)}`);
+      });
+      // ---------- END TEMP DEBUG ----------
+
       initializeModules(bot, mcData, defaultMove);
 
       // Attempt creative mode (only works if bot has OP and enabled in settings)
