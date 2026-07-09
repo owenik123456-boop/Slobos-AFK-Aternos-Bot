@@ -1,7 +1,7 @@
 {
-  "name": "Fire123",
+  "name": "firebot1",
   "bot-account": {
-    "username": "Fire123",
+    "username": "firebot1",
     "password": "firecraft123",
     "type": "offline"
   },
@@ -27,11 +27,10 @@
       "sneak": true
     },
     "chat-messages": {
-      "enabled": false,
-      "repeat": true,
+      "enabled": true,
+      "repeat": false,
       "repeat-delay": 120,
       "messages": [
-        "/register firecraft123 firecraft123",
         "/server boxpvp"
       ]
     },
