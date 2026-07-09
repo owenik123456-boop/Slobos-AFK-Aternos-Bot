@@ -9,7 +9,7 @@
     "ip": "nl-01.freezehost.pro",
     "port": 10691,
     "version": "",
-    "try-creative": false
+    "try-creative": true
   },
   "position": {
     "enabled": true,
